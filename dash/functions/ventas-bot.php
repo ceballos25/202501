@@ -136,39 +136,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
 
                 // Definir los grupos de números con sus respectivos colores de fondo
-                $grupo1 = ['3457', '8231', '1982', '5729', '6403', '4135', '7856', '9304', '2671', '2025'];
-
+                $grupo1 = ['1234', '1515', '1905', '0108', '1122', '9999', '7007', '6666'];
                 $colorGrupo1 = '#007bff'; // Fondo azul 200 mil
 
-                // $grupo2 = ['0000', '4202', '6666', '1234'];
-                // $colorGrupo2 = '#28a745'; // Fondo verde 500 mil
+                $grupo2 = ['4268', '8015'];
+                $colorGrupo2 = '#dc3545'; // Fondo rojo 500
 
                 $colorPredeterminado = '#efb810'; // Fondo predeterminado
 
-                // Muestra el modal con los números
-                echo '<script>';
-                echo '$(document).ready(function() {';
-                echo '    var numeros_vendidos = ' . json_encode($numeros_vendidos) . ';';
-                echo '    var grupo1 = ' . json_encode($grupo1) . ';';
-                echo '    var colorGrupo1 = "' . $colorGrupo1 . '";';
-                echo '    var colorPredeterminado = "' . $colorPredeterminado . '";';
-                echo '    var numerosHTML = "";';
-                echo '    numeros_vendidos.forEach(function(numero, index) {';
-                echo '        var backgroundColor;';
-                echo '        if (grupo1.includes(numero)) {';
-                echo '            backgroundColor = colorGrupo1;';
-                echo '        } else {';
-                echo '            backgroundColor = colorPredeterminado;';
-                echo '        }';
-                echo '        if (index > 0 && index % 5 === 0) {';
-                echo '            numerosHTML += "</div><div style=\"flex-wrap: wrap; gap: 10px;\">";';
-                echo '        }';
-                echo '        numerosHTML += "<span style=\"background-color: " + backgroundColor + "; color: #000; padding: 5px 10px; border-radius: 8px; font-weight: bold; border: 2px solid #000; border-style: dotted; text-align: center; width: 50px; height: 50px; line-height: 40px; margin: 5px;\">" + numero + "</span>";';
-                echo '    });';
-                echo '    $("#numeros_vendidos_container").html(numerosHTML);';
-                echo '    $("#staticBackdrop").modal("show");';
-                echo '});';
-                echo '</script>';
+                    // Muestra el modal con los números
+                    echo '<script>';
+                    echo '$(document).ready(function() {';
+                    echo '    var numeros_vendidos = ' . json_encode($numeros_vendidos) . ';';
+                    echo '    var grupo1 = ' . json_encode($grupo1) . ';';
+                    echo '    var grupo2 = ' . json_encode($grupo2) . ';';
+                    echo '    var colorGrupo1 = "' . $colorGrupo1 . '";';
+                    echo '    var colorGrupo2 = "' . $colorGrupo2 . '";';
+                    echo '    var colorPredeterminado = "' . $colorPredeterminado . '";';
+                    echo '    var numerosHTML = "";';
+                    echo '    numeros_vendidos.forEach(function(numero, index) {';
+                    echo '        var backgroundColor;';
+                    echo '        if (grupo1.includes(numero)) {';
+                    echo '            backgroundColor = colorGrupo1;';
+                    echo '        } else if (grupo2.includes(numero)) {';
+                    echo '            backgroundColor = colorGrupo2;';
+                    echo '        }else {';
+                    echo '            backgroundColor = colorPredeterminado;';
+                    echo '        }';
+                    echo '        if (index > 0 && index % 5 === 0) {';
+                    echo '            numerosHTML += "</div><div style=\"flex-wrap: wrap; gap: 10px;\">";';
+                    echo '        }';
+                    echo '        numerosHTML += "<span style=\"background-color: " + backgroundColor + "; color: #000; padding: 5px 10px; border-radius: 8px; font-weight: bold; border: 2px solid #000; border-style: dotted; text-align: center; width: 50px; height: 50px; line-height: 40px; margin: 5px;\">" + numero + "</span>";';
+                    echo '    });';
+                    echo '    $("#numeros_vendidos_container").html(numerosHTML);';
+                    echo '    $("#staticBackdrop").modal("show");';
+                    echo '});';
+                    echo '</script>';
+
 
 
                 // Cierra las consultas
@@ -181,24 +185,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 try {
 
                     // Definir los grupos de números con sus respectivos colores de fondo
-                    $grupo1 = ['3457', '8231', '1982', '5729', '6403', '4135', '7856', '9304', '2671', '2025'];
-
+                    $grupo1 = ['1234', '1515', '1905', '0108', '1122', '9999', '7007', '6666'];
                     $colorGrupo1 = '#007bff'; // Fondo azul 200 mil
 
-                    // $grupo2 = ['0000', '4202', '6666', '1234'];
-                    // $colorGrupo2 = '#28a745'; // Fondo verde 500 mil
+                    $grupo2 = ['4268', '8015'];
+                    $colorGrupo2 = '#dc3545'; // Fondo rojo 500
 
                     $colorPredeterminado = '#efb810'; // Fondo predeterminado
 
                     $numeros_html = '<div style="display: flex; flex-wrap: wrap;">';
-                    foreach ($numeros_vendidos as $key => $numero) {
-                        if ($key > 0 && $key % 5 === 0) {
-                            $numeros_html .= '</div><div style="display: flex; flex-wrap: wrap;">';
-                        }
-
+                    foreach ($numeros_vendidos as $numero) {
                         // Determinar el color de fondo basado en el número
                         if (in_array($numero, $grupo1)) {
                             $backgroundColor = $colorGrupo1;
+                        } elseif (in_array($numero, $grupo2)) {
+                            $backgroundColor = $colorGrupo2;
                         } else {
                             $backgroundColor = $colorPredeterminado;
                         }
@@ -255,7 +256,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <body>
                             <div class="container">                            
                             <h2 style="text-align: center; margin-top:40px;">' . $nombre . '</h2>
-                                <img src="https://eldiadetusuerte.com/images/agradecimientov5.png" alt="Imagen de agradecimiento" style="display: block; margin: 0 auto 20px; width: 100%;" >                                
+                                <img src="https://eldiadetusuerte.com/images/agradecimientov6.png" alt="Imagen de agradecimiento" style="display: block; margin: 0 auto 20px; width: 100%;" >                                
                                 <p>Tienes: ' . count($numeros_vendidos) . ' oportunidades para ganar.</p>
                                 <div class="badge-container">' . $numeros_html . '</div>
                                 <p>Te deseamos mucha suerte.</p>
@@ -425,28 +426,30 @@ mysqli_close($conexion);
                     <span style="float: right; margin-left:auto; margin-top:8px; margin-right:10px"><b>Fecha:</b> <?php echo $fecha_final ?></span>
                 </div>
                 <h4 class="text-center mt-3"> <b><?php echo $nombre ?></b></h4>
-                <img src="https://eldiadetusuerte.com/images/agradecimientov5.png" class="card-img-top" alt="...">
+                <img src="https://eldiadetusuerte.com/images/agradecimientov6.png" class="card-img-top" alt="...">
             </div>
             <ul class="list-group" style="background-color: #fff;">
                 <li class="list-group-item" style="line-height:32px">
                     <i class="fas fa-ticket-alt me-3" style="line-height:32px"></i> <strong>Estos son tus números:</strong>
                     <div id="numeros_vendidos_container">
                     <?php
+
                         // Definir los grupos de números con sus respectivos colores de fondo
-                        $grupo1 = ['3457', '8231', '1982', '5729', '6403', '4135', '7856', '9304', '2671', '2025'];
+                        $grupo1 = ['1234', '1515', '1905', '0108', '1122', '9999', '7007', '6666'];
                         $colorGrupo1 = '#007bff'; // Fondo azul 200 mil
+
+                        $grupo2 = ['4268', '8015'];
+                        $colorGrupo2 = '#dc3545'; // Fondo rojo 500
 
                         $colorPredeterminado = '#efb810'; // Fondo predeterminado
 
                         echo '<div style="flex-wrap: wrap; margin-bottom: 10px;">'; // Contenedor principal con flexbox
-                        foreach ($numeros_vendidos as $key => $numero) {
-                            if ($key > 0 && $key % 5 === 0) {
-                                echo '</div><div style="flex-wrap: wrap;">'; // Nueva fila después de cada 5 elementos
-                            }
-
+                        foreach ($numeros_vendidos as $numero) {
                             // Determinar el color de fondo basado en el número
                             if (in_array($numero, $grupo1)) {
                                 $backgroundColor = $colorGrupo1;
+                            } elseif (in_array($numero, $grupo2)) {
+                                $backgroundColor = $colorGrupo2;
                             } else {
                                 $backgroundColor = $colorPredeterminado;
                             }

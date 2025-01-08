@@ -103,11 +103,11 @@ include 'plantilla.php';
                         <!--<option value="3">3x = $21.000</option>-->
                         <!--<option value="4">4x = $28.000</option>-->
                         <!-- <option value="4">4x = $24.000</option> -->
-                        <option value="5">5x = $17.500</option>
-                        <option value="7">7x = $24.500</option>
+                        <option value="5">5x = $20.000</option>
+                        <option value="7">7x = $28.000</option>
                          <option value="10">10x = $35.000</option>
-                        <option value="20">20x = $60.000</option>
-                        <option value="50">50x = $150.000</option>
+                        <option value="20">20x = $70.000</option>
+                        <option value="50">50x = $175.000</option>
                         <option value="Otro">Otro</option>
                     </select>
                 </div>
@@ -195,10 +195,10 @@ include 'plantilla.php';
                     // }
                     
                     // Calcular el valor a pagar según la cantidad de números
-                        if (totalNumeros < 20) {
-                            totalPagar = totalNumeros * 3500;
+                        if (totalNumeros < 10) {
+                            totalPagar = totalNumeros * 4000;
                         } else { // Para todos los valores >= 20
-                            totalPagar = totalNumeros * 3000;
+                            totalPagar = totalNumeros * 3500;
                         }
 
 

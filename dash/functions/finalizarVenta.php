@@ -106,28 +106,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $consulta_eliminar_numeros->execute();
                 }
 
-                // Definir los grupos de números con sus respectivos colores de fondo
-                $grupo1 = ['3457', '8231', '1982', '5729', '6403', '4135', '7856', '9304', '2671', '2025'];
-                $colorGrupo1 = '#007bff'; // Fondo azul 200 mil
+                    // Definir los grupos de números con sus respectivos colores de fondo
+                    $grupo1 = ['1234', '1515', '1905', '0108', '1122', '9999', '7007', '6666'];
+                    $colorGrupo1 = '#007bff'; // Fondo azul 200 mil
 
-                // $grupo2 = ['0000', '4202', '6666', '1234'];
-                // $colorGrupo2 = '#28a745'; // Fondo verde 500 mil
+                    $grupo2 = ['4268', '8015'];
+                    $colorGrupo2 = '#dc3545'; // Fondo rojo 500
 
-                $colorPredeterminado = '#efb810'; // Fondo predeterminado
+                    $colorPredeterminado = '#efb810'; // Fondo predeterminado
 
                 // Muestra el modal con los números
                 echo '<script>';
                 echo '$(document).ready(function() {';
                 echo '    var numeros_vendidos = ' . json_encode($numeros_vendidos) . ';';
                 echo '    var grupo1 = ' . json_encode($grupo1) . ';';
+                echo '    var grupo2 = ' . json_encode($grupo2) . ';';
                 echo '    var colorGrupo1 = "' . $colorGrupo1 . '";';
+                echo '    var colorGrupo2 = "' . $colorGrupo2 . '";';
                 echo '    var colorPredeterminado = "' . $colorPredeterminado . '";';
                 echo '    var numerosHTML = "";';
                 echo '    numeros_vendidos.forEach(function(numero, index) {';
                 echo '        var backgroundColor;';
                 echo '        if (grupo1.includes(numero)) {';
                 echo '            backgroundColor = colorGrupo1;';
-                echo '        } else {';
+                echo '        } else if (grupo2.includes(numero)) {';
+                echo '            backgroundColor = colorGrupo2;';
+                echo '        }else {';
                 echo '            backgroundColor = colorPredeterminado;';
                 echo '        }';
                 echo '        if (index > 0 && index % 5 === 0) {';
@@ -163,7 +167,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $mail->Subject = 'Confirmacion:' . '#' . $codigoTransaccion . '-' . $id_venta;
                     $mail->Body = "Estimado(a) " . $nombre . ",\n\n";
                     $mail->Body .= "A continuacion los numeros generados por nuestro sistema: " . implode(", ", $numeros_vendidos) . ".\n\n";
-                    $mail->Body .= "Esta dinámica jugará este 28 de diciembre con las (4) cifras de la de Boyacá.: " . ".\n\n";
+                    $mail->Body .= "¡Juega este 31 de enero 🗓️ por la LOT de Medellin!.: " . ".\n\n";
                     $mail->Body .= "Gracias por tu compra.\n\n";
                     $mail->Body .= "Atentamente,\n";
                     $mail->Body .= "El dia de Tu Suerte";

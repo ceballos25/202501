@@ -351,7 +351,7 @@ $conn->close();
 
         <div class="precio">
           <h2>$35.000</h2>
-          <!--<span class="valor-promo">$90.000</span>-->
+          <span class="valor-promo">$40.000</span>
         </div>
         <div class="cta-buy">
           <button onclick="modal_x10()">COMPRAR <span class="img-logo"><img src="images/haga-clic-aqui.png" alt="comprar ahora"></span></button>
@@ -379,7 +379,7 @@ $conn->close();
 
         <div class="precio">
           <h2>$70.000</h2>
-          <span class="valor-promo">$70.000</span>
+          <span class="valor-promo">$80.000</span>
         </div>
         <div class="cta-buy">
           <button onclick="modal_x20()">COMPRAR <span class="img-logo"><img src="images/haga-clic-aqui.png" alt="comprar ahora"></span></button>
@@ -395,8 +395,8 @@ $conn->close();
         </div>
 
         <div class="precio">
-          <h2>$150.000</h2>
-          <span class="valor-promo">$175.000</span>
+          <h2>$175.000</h2>
+          <span class="valor-promo">$200.000</span>
 
         </div>
         <div class="cta-buy">
@@ -669,7 +669,7 @@ $conn->close();
                       <option value="Cantidad de Oportunidades" required>Oportunidades</option>
                       <!-- <option value="2">2x = $12.000</option> -->
                       <option value="5">5x = $20.000</option>
-                      <option value="7">7x = $28.500</option>
+                      <option value="7">7x = $28.000</option>
                       <!-- <option value="6">6x = $30.000</option> -->
                       <option value="10">10x = $35.000</option>
                       <option value="20">20x = $70.000</option>

@@ -115,7 +115,7 @@ try {
         <div class="container">                            
         <span style="float: right"><b>Fecha: ' . $fecha . '</b></span>
         <h2 style="text-align: center; margin-top:40px;"></h2>
-        <img src="https://eldiadetusuerte.com/images/agradecimientov5.png" alt="Imagen de agradecimiento" style="display: block; margin: 0 auto 20px; width: 100%;" >
+        <img src="https://eldiadetusuerte.com/images/agradecimientov6.png" alt="Imagen de agradecimiento" style="display: block; margin: 0 auto 20px; width: 100%;" >
             <p>Estimado cliente,</p>
             <p>A continuación encontrará los números que usted adquirió con nosotros: <br></p>
             <div class="badge-container">' . $numeros_html . '</div>

@@ -231,7 +231,7 @@ function enviarCorreo($correo, $codigoTransaccion, $id_venta, $nombre, $numeros_
                 <h2 style="text-align: center">' . $nombre . '</h2>
                 <img src="https://eldiadetusuerte.com/images/agradecimiento.png" width="50%" alt="Imagen de agradecimiento" style="display: block; margin: 0 auto 20px; width: 100%;" >
                 <p>Queremos agradecerte por la compra, y esperamos que la suerte este de tu lado. A continuacion, los numeros generados por nuestro sistema.</p>
-                <p><b>Recuerda:</b> el sorteo jugara con las (4) cifras de la Loteria de Medellin. Anunciaremos la fecha del sorteo en nuestro sitio web y redes sociales.</p>
+                <p><b>Recuerda:</b> ¡Juega este 31 de enero 🗓️ por la LOT de Medellin!.</p>
                 <p>Hemos enviado una copia de esta informacion a tu correo electronico para tu referencia y conveniencia.</p>
                 <p>Tienes: ' . count($numeros_vendidos) . ' oportunidades para ganar.</p>
                 ' . $numeros_html . '
@@ -327,7 +327,7 @@ function enviarCorreo($correo, $codigoTransaccion, $id_venta, $nombre, $numeros_
             <ul class="list-group">
                 <li class="list-group-item">Queremos agradecerte por la compra, y esperamos que la suerte este de tu lado. 🍀</li>
                 <p class="list-group-item">A continuación los números generados por nuestro sistema:
-                    <b>Recuerda:</b> el sorteo jugará con las (4) cifras de la Lotería de Medellín. </p>
+                    <b>Recuerda:</b> ¡Juega este 31 de enero 🗓️ por la LOT de Medellin!. </p>
                 <p style="margin-left:15px">Anunciaremos la fecha del sorteo en nuestro sitio web y redes sociales.</p>
                 <p style="margin-left:15px">Hemos enviado una copia de esta información a tu correo electrónico para tu referencia y conveniencia.</p>
                 <li class="list-group-item">
