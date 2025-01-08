@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificación de Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+        .ticket {
+            background-color: #ffc107;
+            color: #333;
+            border-radius: 5px;
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center">{nombre}</h2>
+        <img src="https://eldiadetusuerte.com/images/agradecimientov3.png" width="50%" alt="Imagen de agradecimiento" style="display: block; margin: 0 auto 20px; width: 100%;" >
+        <p>Tienes: {count_numeros_vendidos} oportunidades para ganar.</p>
+        {numeros_html}
+        <p style="margin:10px">Te deseamos mucha suerte.</p>
+
+        <p><b>Recuerda:</b> esta dinámica jugará este 22 de noviembre con las (4) cifras de la LOT de Medellin.</p>
+        <p>Únete a nuestro canal de WhatsApp para que no te pierdas los detalles del sorteo.
+        <a href="https://chat.whatsapp.com/L8cLyUtv64GCdgb1GaxEm2" style="text-decoration: none;">
+        <button style="padding: 5px 5px; background-color: #25d366; color: white; border: none; border-radius: 5px; font-size: 14px; cursor: pointer;">
+            Ir al canal
+        </button>
+        </a>
+        </p>
+    </div>
+</body>
+</html>

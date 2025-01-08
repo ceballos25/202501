@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificación de Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+        .ticket {
+            background-color: #ffc107;
+            color: #333;
+            border-radius: 5px;
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://eldiadetusuerte.com/images/agradecimientov5.png" alt="Imagen de agradecimiento" style="display: block; margin: 0 auto 20px; width: 100%;" >
+        <h3>Nombre</h3>
+        
+        <p>Hola, queremos agradecerte por la Compra, a continuacion los numeros generados por nuestro sistema.:</p>
+        <?php foreach ($numeros_tickets as $ticket) : ?>
+            <span class="ticket"><?php echo $ticket; ?></span>
+        <?php endforeach; ?>
+        <p>¡Te deseamos mucha suerte!</p>
+    </div>
+</body>
+</html>
