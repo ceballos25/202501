@@ -272,7 +272,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <span style="float: left;"><b>id:</b> ' . $codigoTransaccion . ' </span>
                             <span style="float: right"><b>Fecha:</b> ' . $fecha_final . '</span>
                             <h2 style="text-align: center; margin-top:40px;">' . $nombre . '</h2>
-                                <img src="https://eldiadetusuerte.com/images/agradecimientov5.png" alt="Imagen de agradecimiento" style="display: block; margin: 0 auto 20px; width: 100%;" >                                
+                                <img src="https://eldiadetusuerte.com/images/agradecimientov6.png" alt="Imagen de agradecimiento" style="display: block; margin: 0 auto 20px; width: 100%;" >                                
                                 <p>Tienes: ' . count($numeros_vendidos) . ' oportunidades para ganar.</p>
                                 <div class="badge-container">' . $numeros_html . '</div>
                                 <p>Te deseamos mucha suerte.</p>
@@ -392,7 +392,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span style="float: right; margin-left:auto; margin-top:8px; margin-right:10px"><b>Fecha:</b> <?php echo $fecha_final ?></span>
             </div>
             <h4 class="text-center mt-3"> <b><?php echo $nombre ?></b></h4>
-            <img src="https://eldiadetusuerte.com/images/agradecimientov5.png" class="card-img-top" alt="...">
+            <img src="https://eldiadetusuerte.com/images/agradecimientov6.png" class="card-img-top" alt="...">
         </div>
         <ul class="list-group" style="background-color: #fff;">
             <li class="list-group-item" style="line-height:32px">

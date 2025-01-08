@@ -423,7 +423,7 @@ function enviarCorreo($correo, $codigoTransaccion, $id_venta, $nombre, $numeros_
             <h4 class="d-flex justify-content-center my-4"><b><?php echo $nombre; ?></b></h4>
             <div class="">
                 <div class="card mb-3">
-                    <img src="http://eldiadetusuerte.com/images/agradecimientov5.png" class="card-img-top" alt="imagen-agradecimiento">
+                    <img src="http://eldiadetusuerte.com/images/agradecimientov6.png" class="card-img-top" alt="imagen-agradecimiento">
                 </div>
                 <ul class="list-group">
                     <li class="list-group-item" style="line-height:32px">

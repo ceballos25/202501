@@ -81,7 +81,7 @@ $mail->Body = '<!DOCTYPE html>
 <body>
     <div class="container">
         <h2 style="text-align: center"></h2>
-        <img src="https://eldiadetusuerte.com/images/agradecimientov5.png" width="50%" alt="Imagen de agradecimiento" style="display: block; margin: 0 auto 20px; width: 100%;" >
+        <img src="https://eldiadetusuerte.com/images/agradecimientov6.png" width="50%" alt="Imagen de agradecimiento" style="display: block; margin: 0 auto 20px; width: 100%;" >
         <p>Tienes: ' . count($numeros_vendidos) . ' oportunidades para ganar.</p>
         ' . $numeros_html . '
         <p style="margin:10px">Te deseamos mucha suerte.</p>
