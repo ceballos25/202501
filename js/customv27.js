@@ -33,14 +33,6 @@ function modal_xotro() {
 }
 
 
-   // JavaScript para mantener las nieves encima de la tarjeta
-          document.addEventListener('DOMContentLoaded', function() {
-            var snowflakes = document.querySelectorAll('.snowflake');
-            snowflakes.forEach(function(flake) {
-                flake.style.top = Math.random() * 100 + 'vh';
-                flake.style.left = Math.random() * 100 + '%';
-            });
-        });
 
     
 function actualizarTotalManual() {
@@ -697,6 +689,24 @@ $(document).ready(function () {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    new Splide('.splide', {
+        type: 'loop',
+        height: '14rem',
+        perPage: 1,
+        perMove: 1,
+        autoplay:true,
+        breakpoints: {
+            640: {
+                height: '8rem',
+                perPage: 1,
+            },
+        },
+    }).mount();
+});
+
 
 // //deshabilitar la inspección
 // document.addEventListener('contextmenu', function(e) {

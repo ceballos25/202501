@@ -23,17 +23,7 @@ $conn->close();
 <span class="ir-arriba"></span>
 <!-- banner -->
 
-     <div class="snow">
-        <div class="snowflake" style="left: 10%; animation-duration: 3s;"></div>
-        <div class="snowflake" style="left: 15%; animation-duration: 5s;"></div>
-        <div class="snowflake" style="left: 10%; animation-duration: 7s;"></div>
-        <div class="snowflake" style="left: 25%; animation-duration: 8s;"></div>
-        <div class="snowflake" style="left: 30%; animation-duration: 3s;"></div>
-        <div class="snowflake" style="left: 35%; animation-duration: 2s;"></div>
-        <div class="snowflake" style="left: 40%; animation-duration: 7s;"></div>
-        <div class="snowflake" style="left: 45%; animation-duration: 8s;"></div>
-        <div class="snowflake" style="left: 50%; animation-duration: 9s;"></div>
-    </div>
+
 
 <!-- banner principal -->
 <section class="banner_main mb-5 contenido">
@@ -44,26 +34,44 @@ $conn->close();
           <h2 class="pb-1 text-center text-bg titulo-pequeno">
             <span class="text-decoration yellow">Arranca el año con toda</span>
             <br>
-            <span class="yellow"> <span class="color-mt"> Te traemos una hermosa Pulsar NS-200 ✨</span> </span>
+            <span class="yellow"> <span class="color-mt"> Te traemos una hermosa <span class="color-premio">Pulsar NS-200</span> ✨</span> </span>
 
           </h2>
           <div class="row direction">
+
+            <div class="col-md-6 img-fluid moto position-relative">
+              <div class="contenedor__img-sorteo">
+                <div class="text-center fecha-juego">
+                  <span class="animate__animated animate__bounce badge rounded-pill bg-success">¡Juega este 31 de enero 🗓️
+                    por la de Medellín! </span>
+                </div>
+                <div class="moto-rifada">
+                  <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30" centered-slides="true" autoplay-delay="3500" autoplay-disable-on-interaction="false">
+                    <swiper-slide><img src="images/moto-enero.jpg" alt="rifa-moto"></swiper-slide>
+
+                  </swiper-container>
+                </div>
+
+              </div>
+              <!--barra porcentaje-->
+              <div class="mt-5">
+                <p class="mb-1 text-center fs-6 number-vendidos">Números vendidos:</p>
+                <div class="progress" style="height: 26px; position: relative;width:488px">
+                  <div id="progress-bar" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="<?php echo $porcentaje; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $porcentaje; ?>%;">
+                  </div>
+                  <span class="progress-bar-text texto-barra"><?php echo $porcentajeReal; ?></span>
+                </div>
+              </div>
+            </div>
+
             <div class="col-md-6">
               <div class="text-bg">
                 <h1 class="pb-1 text-center titulo-grande">
                   <span class="text-decoration yellow">Arranca el año con toda</span>
                   <br>
-                 <span class="yellow"> <span class="color-mt"> Te traemos una hermosa Pulsar NS-200 ✨</span> </span>
+                  <span class="yellow"> <span class="color-mt"> Te traemos una hermosa <span class="color-premio">Pulsar NS-200</span> ✨</span> </span>
                 </h1>
-                <!--barra porcentaje-->
-                <div class="mt-5">
-                  <p class="mb-1 text-center fs-6">Números vendidos:</p>
-                  <div class="progress" style="height: 26px; position: relative;">
-                    <div id="progress-bar" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="<?php echo $porcentaje; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $porcentaje; ?>%;">
-                    </div>
-                    <span class="progress-bar-text texto-barra"><?php echo $porcentajeReal; ?></span>
-                  </div>
-                </div>
+
                 <!--personas comprando en este momento-->
                 <style>
                   #counter {
@@ -77,22 +85,7 @@ $conn->close();
 
                   }
                 </style>
-                <!--<p id="counter">¡En tendencia! 📈 6 personas 👥 están comprando ahora.</p>-->
-                <!--<script>-->
-                <!--  // Inicializa el número-->
-                <!--  let number = 5;-->
 
-                <!--  // Función para actualizar el número-->
-                <!--  function updateNumber() {-->
-                <!--    // Genera un número aleatorio entre 1 y 20-->
-                <!--    number = Math.floor(Math.random() * 6) + 2;-->
-                <!--    // Actualiza el contenido del elemento con el nuevo número-->
-                <!--    document.getElementById('counter').textContent = `¡En tendencia! 📈 ${number} personas 👥 están comprando ahora.`;-->
-                <!--  }-->
-
-                <!--  // Llama a la función de actualización cada 3 segundos-->
-                <!--  setInterval(updateNumber, 2080);-->
-                <!--</script>-->
                 <div class="combo-mas-vendido">
                   <div class="card1" data-aos="zoom-in">
                     <div class="cintilla-promocion"><img src="images/mas-vendido.png" alt="el mas vendido"></div>
@@ -111,21 +104,7 @@ $conn->close();
               </div>
             </div>
 
-            <div class="col-md-6 img-fluid moto position-relative">
-              <div class="contenedor__img-sorteo">
-                <div class="text-center fecha-juego">
-                  <span class="animate__animated animate__bounce badge rounded-pill bg-success">¡Juega este 31 de enero 🗓️
-                    por la de Medellín! </span>
-                </div>
-                <div class="moto-rifada">
-                  <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30" centered-slides="true" autoplay-delay="3500" autoplay-disable-on-interaction="false">
-                    <swiper-slide><img src="images/premio-diciembrev2.jpg" alt="rifa-moto"></swiper-slide>
-                    
-                  </swiper-container>
-                </div>
 
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -144,13 +123,13 @@ $conn->close();
           <span class="yellow my-5 mx-1">🎉 ¡10 Números Ganadores y Grandes Premios!</span>
         </h3>
       </div>
-      
+
       <div class="text-center my-2 mb-3 inmediato">
         <div class="badge badge-success text-wrap" style="font-size: 15px; padding: 0.7rem;">
           Si te sale alguno de estos números, el pago será <strong>INMEDIATO.</strong>
         </div>
       </div>
-      
+
       <div class="container numbers-premiados">
         <div class="row">
           <!-- Tarjeta para números de 200 mil -->
@@ -169,12 +148,12 @@ $conn->close();
                   <span class="bg-primary m-1" style="color: #000; padding: 5px; border-radius: 8px; font-weight: bold; border: 2px solid #000; border-style: dotted;">6666</span>
                 </div>
                 <p class="espaciado-card2">&nbsp;</p>
-                
+
               </div>
             </div>
           </div>
-                  
-            <div class="col-12 col-md-4 my-1 mx-0">
+
+          <div class="col-12 col-md-4 my-1 mx-0">
             <div class="card text-center border border-danger">
               <div class="card-body">
                 <h3 class="card-title premio-500">$500.000 🤑</h3>
@@ -182,55 +161,55 @@ $conn->close();
                   <span class="bg-danger m-1" style="color: #000; padding: 5px; border-radius: 8px; font-weight: bold; border: 2px solid #000; border-style: dotted;">4268</span>
                   <span class="bg-danger m-1" style="color: #000; padding: 5px; border-radius: 8px; font-weight: bold; border: 2px solid #000; border-style: dotted;">8015</span>
                 </div>
-                  <!--<p class="espaciado-card2">&#160;</p>-->
-                  <!--<p class="espaciado-card2">&nbsp;</p>-->
+                <!--<p class="espaciado-card2">&#160;</p>-->
+                <!--<p class="espaciado-card2">&nbsp;</p>-->
               </div>
             </div>
-          </div> 
-          
-            <!-- Tarjeta para numeros de 500 -->
+          </div>
+
+          <!-- Tarjeta para numeros de 500 -->
           <div class="col-12 col-md-4 my-1">
             <div class="card text-center border">
               <div class="card-body mono">
                 <h3 class="card-title premio-10000">$1.000.000 🤑</h3>
                 <p class="card-title premio-10000">Para quien más entradas tenga</p>
-              <!--<p class="espaciado-card2">&#160;</p>-->
-              <!--  <p class="espaciado-card2">&#160;</p>-->
+                <!--<p class="espaciado-card2">&#160;</p>-->
+                <!--  <p class="espaciado-card2">&#160;</p>-->
               </div>
             </div>
           </div>
 
- 
 
 
 
-      <!--<div class="text-center my-2 mb-3 inmediato">-->
-      <!--  <div class="badge badge-success text-wrap" style="font-size: 15px; padding: 0.7rem;">-->
-      <!--    Si te sale alguno de estos números, el pago será <strong>INMEDIATO.</strong>-->
-      <!--  </div>-->
-      <!--</div>-->
-      <!-- Ya cayó-->
-      <!-- <div class="col-12 col-md-12 my-1">-->
-      <!--  <div class="text-bg text-center">-->
-      <!--    <h3 class="h2">-->
-      <!--      <span class="yellow my-5 mx-2">📢 ¡Aviso importante vuelve y juega! 📢</span>-->
-      <!--    </h3>-->
-      <!--  </div>-->
-      <!--  <div class="card text-center border border-success mt-3">-->
-      <!--    <div class="card-body">-->
-      <!--      <div class="d-flex flex-wrap justify-content-center">-->
-      <!--        El pasado 22 de noviembre se realizó el sorteo, pero no se vendió el número ganador (0852) y tampoco el número invertido (2580).🎊🎊 <br> <br> ¡Buena noticia! 🙌 Puedes seguir comprando para participar en el sorteo de este viernes 6 de diciembre. ¡Cada número es una nueva oportunidad de ganar! 🍀-->
-      <!--      </div>-->
-      <!--    </div>-->
-      <!--  </div>-->
-      <!--</div> -->
-    </div>
+
+          <!--<div class="text-center my-2 mb-3 inmediato">-->
+          <!--  <div class="badge badge-success text-wrap" style="font-size: 15px; padding: 0.7rem;">-->
+          <!--    Si te sale alguno de estos números, el pago será <strong>INMEDIATO.</strong>-->
+          <!--  </div>-->
+          <!--</div>-->
+          <!-- Ya cayó-->
+          <!-- <div class="col-12 col-md-12 my-1">-->
+          <!--  <div class="text-bg text-center">-->
+          <!--    <h3 class="h2">-->
+          <!--      <span class="yellow my-5 mx-2">📢 ¡Aviso importante vuelve y juega! 📢</span>-->
+          <!--    </h3>-->
+          <!--  </div>-->
+          <!--  <div class="card text-center border border-success mt-3">-->
+          <!--    <div class="card-body">-->
+          <!--      <div class="d-flex flex-wrap justify-content-center">-->
+          <!--        El pasado 22 de noviembre se realizó el sorteo, pero no se vendió el número ganador (0852) y tampoco el número invertido (2580).🎊🎊 <br> <br> ¡Buena noticia! 🙌 Puedes seguir comprando para participar en el sorteo de este viernes 6 de diciembre. ¡Cada número es una nueva oportunidad de ganar! 🍀-->
+          <!--      </div>-->
+          <!--    </div>-->
+          <!--  </div>-->
+          <!--</div> -->
+        </div>
 
 
   </section>
 
 
-<!--section ganadores estaban aqui-->
+  <!--section ganadores estaban aqui-->
 
 
   <!-- main container cards -->
@@ -242,67 +221,70 @@ $conn->close();
         </h2>
       </div>
     </section>
-    
+
     <!-- Añadimos la cuenta regresiva al final del contenido de tu página, justo antes de cerrar el body -->
-        <!--<div class="countdown">-->
-        <!--    <span>Faltan:</span>-->
-        <!--    <div id="timer"></div>-->
-        <!--</div>-->
+    <!--<div class="countdown">-->
+    <!--    <span>Faltan:</span>-->
+    <!--    <div id="timer"></div>-->
+    <!--</div>-->
 
 
     <!--CUENTA REGRESIVA-->
-<!--    <script>-->
-<!--    function updateCountdown() {-->
-<!--        const eventDate = new Date("December 6, 2024 23:00:00").getTime();-->
-<!--        const now = new Date().getTime();-->
-<!--        const timeLeft = eventDate - now;-->
+    <!--    <script>-->
+    <!--    function updateCountdown() {-->
+    <!--        const eventDate = new Date("December 6, 2024 23:00:00").getTime();-->
+    <!--        const now = new Date().getTime();-->
+    <!--        const timeLeft = eventDate - now;-->
 
-<!--        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));-->
-<!--        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));-->
-<!--        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));-->
-<!--        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);-->
+    <!--        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));-->
+    <!--        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));-->
+    <!--        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));-->
+    <!--        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);-->
 
-<!--        document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;-->
+    <!--        document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;-->
 
-<!--        if (timeLeft < 0) {-->
-<!--            document.getElementById("timer").innerHTML = "¡El evento ha comenzado!";-->
-<!--        }-->
-<!--    }-->
+    <!--        if (timeLeft < 0) {-->
+    <!--            document.getElementById("timer").innerHTML = "¡El evento ha comenzado!";-->
+    <!--        }-->
+    <!--    }-->
 
-<!--    setInterval(updateCountdown, 1000);-->
-<!--</script>-->
+    <!--    setInterval(updateCountdown, 1000);-->
+    <!--</script>-->
 
-<!-- Agregamos el CSS que lo posicionará al pie de la página -->
-<style>
-    .countdown {
+    <!-- Agregamos el CSS que lo posicionará al pie de la página -->
+    <style>
+      .countdown {
         position: fixed;
-        bottom: 0; /* Fija la cuenta regresiva en la parte inferior */
+        bottom: 0;
+        /* Fija la cuenta regresiva en la parte inferior */
         left: 50%;
-        transform: translateX(-50%); /* Centra la cuenta regresiva en la pantalla */
+        transform: translateX(-50%);
+        /* Centra la cuenta regresiva en la pantalla */
         background: #ffbc42;
         padding: 0px 15px;
         color: #000;
         font-size: 1.2em;
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 1000; /* Asegura que la cuenta regresiva esté sobre otros elementos */
+        z-index: 1000;
+        /* Asegura que la cuenta regresiva esté sobre otros elementos */
         width: auto;
-    }
+      }
 
-    .countdown span {
+      .countdown span {
         font-size: 1em;
         margin: 5px;
         FONT-WEIGHT: BOLD;
         FONT-STYLE: italic;
-    }
+      }
 
-    @media (max-width: 768px) {
+      @media (max-width: 768px) {
         .countdown {
-            font-size: 1em;
-            padding: 0px 16px;
+          font-size: 1em;
+          padding: 0px 16px;
         }
-    }
-</style>
+      }
+    </style>
     <div class="contenedor-cards">
       <!-- Cambios nuevo paquete -->
 
@@ -338,7 +320,7 @@ $conn->close();
 
         <div class="precio">
           <h2>$20.000</h2>
-            <!--<span class="valor-promo">$27.000</span>-->
+          <!--<span class="valor-promo">$27.000</span>-->
         </div>
 
         <div class="cta-buy">
@@ -375,7 +357,7 @@ $conn->close();
           <button onclick="modal_x10()">COMPRAR <span class="img-logo"><img src="images/haga-clic-aqui.png" alt="comprar ahora"></span></button>
 
         </div>
-        
+
       </div>
 
 
@@ -389,8 +371,8 @@ $conn->close();
 
 
     <div class="contenedor-cards">
-        
-               <div class="card1" data-aos="zoom-in">
+
+      <div class="card1" data-aos="zoom-in">
         <div class="promocion">
           <h2>20x</h2>
         </div>
@@ -404,7 +386,7 @@ $conn->close();
 
         </div>
       </div>
-      
+
 
       <div class="card1" data-aos="zoom-in">
         <img src="images/premium.png" width="150" style="margin-top: -45px; margin-right:10px" alt="paquete-premium">
@@ -442,9 +424,33 @@ $conn->close();
     </div>
   </div>
   <!-- end container cards -->
-  
+
+  <div class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <!-- Cada <li> representa una diapositiva con título y contenido -->
+        <li class="splide__slide">
+          <div class="yellow">¡Ganador dinámica de <strong>Octubre</strong> FZ 3.0 🏍</div>
+          <img src="images/ganadorfz.png" alt="Ganadora">
+        </li>
+        <li class="splide__slide">
+          <div class="yellow">¡Ganadora Crypton FI! 🏍</div>
+          <img src="images/ganadora.png" alt="Ganador MT">
+        </li>
+        <li class="splide__slide">
+          <div class="yellow">¡Ganador dinámica de <strong>Julio</strong> Yamaha MT15! 🏍</div>
+          <img src="images/ganadormt.png" alt="Ganador MT">
+        </li>
+        <li class="splide__slide">
+          <div class="yellow">¡Ganador dinámica de <strong>Agosto</strong> NMAX 2025 🏍</div>
+          <img src="images/ganadornmax.png" alt="Ganador MT">
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <!--Nueva posicion ganadores-->
-    <div id="slider" class="text-center py-2 mx-3 mt-2" data-aos="zoom-in">
+  <!-- <div id="slider" class="text-center py-2 mx-3 mt-2" data-aos="zoom-in">
     <h3 class="h3 mt-4">
       <span id="title-text" class="yellow my-4">¡Ganador dinámica de <strong>Julio</stganarong> Yamaha MT15! 🏍</span>
     </h3>
@@ -466,7 +472,7 @@ $conn->close();
       "images/ganadora.png",
       "images/ganadormt.png",
       "images/ganadornmax.png"
-      
+
     ];
 
     let currentIndex = 0;
@@ -479,7 +485,7 @@ $conn->close();
 
     // Cambia de diapositiva cada 3 segundos
     setInterval(updateSlide, 8000);
-  </script>
+  </script> -->
 
   <!-- modal de calificación -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -666,7 +672,7 @@ $conn->close();
                       <option value="7">7x = $28.500</option>
                       <!-- <option value="6">6x = $30.000</option> -->
                       <option value="10">10x = $35.000</option>
-                       <option value="20">20x = $70.000</option> 
+                      <option value="20">20x = $70.000</option>
                       <option value="50">50x = $175.000</option>
                       <!--<option value="100">100x = $600.000</option>-->
                       <option value="Otro">Otro</option>
