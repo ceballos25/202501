@@ -90,7 +90,7 @@ if ($conexion) {
             echo '<div style="text-align: center; font-family: Arial, sans-serif; font-size: 20px; line-height: 1.6;">
             <p style="margin-bottom: 20px;">¿Tienes problemas con tu pago o tus números? ¡Estamos aquí para ayudarte!</p>
             <p style="margin-bottom: 20px;">Contacta con nuestro equipo especializado para recibir asistencia inmediata:</p>
-            <p><a href="https://wa.link/2u006f" target="_blank" style="color: #EFB810; text-decoration: underline; font-weight: bold;">Contáctanos en WhatsApp </a></p>
+            <p><a href="https://wa.link/iktc4e" target="_blank" style="color: #EFB810; text-decoration: underline; font-weight: bold;">Contáctanos en WhatsApp </a></p>
           </div> ';
             die('Error de validación: token inválido o no encontrado.');
         }
@@ -263,11 +263,11 @@ function enviarCorreo($correo, $codigoTransaccion, $id_venta, $nombre, $numeros_
 {
     try {
         // Definir los grupos de números con sus respectivos colores de fondo
-        $grupo1 = ['3457', '8231', '1982', '5729', '6403', '4135', '7856', '9304', '2671', '2025'];
+        $grupo1 = ['1234', '1515', '1905', '0108', '1122', '9999', '7007', '6666'];
         $colorGrupo1 = '#007bff'; // Fondo azul 200 mil
 
-        // $grupo2 = ['0000', '4202', '6666', '1234'];
-        // $colorGrupo2 = '#28a745'; // Fondo verde 500 mil
+        $grupo2 = ['4268', '8015'];
+        $colorGrupo2 = '#dc3545'; // Fondo rojo 500
 
         $colorPredeterminado = '#efb810'; // Fondo predeterminado
 
@@ -280,7 +280,9 @@ function enviarCorreo($correo, $codigoTransaccion, $id_venta, $nombre, $numeros_
             // Determinar el color de fondo basado en el número
             if (in_array($numero, $grupo1)) {
                 $backgroundColor = $colorGrupo1;
-            }  else {
+            } elseif (in_array($numero, $grupo2)) {
+                $backgroundColor = $colorGrupo2;
+            } else {
                 $backgroundColor = $colorPredeterminado;
             }
 
@@ -429,24 +431,21 @@ function enviarCorreo($correo, $codigoTransaccion, $id_venta, $nombre, $numeros_
                         <div id="numeros_vendidos_container">
                             <?php
                                 // Definir los grupos de números con sus respectivos colores de fondo
-                                $grupo1 = ['3457', '8231', '1982', '5729', '6403', '4135', '7856', '9304', '2671', '2025'];
+                                $grupo1 = ['1234', '1515', '1905', '0108', '1122', '9999', '7007', '6666'];
                                 $colorGrupo1 = '#007bff'; // Fondo azul 200 mil
 
-                                // $grupo2 = ['0000', '4202', '6666', '1234'];
-                                // $colorGrupo2 = '#28a745'; // Fondo verde 500 mil
-                            
+                                $grupo2 = ['4268', '8015'];
+                                $colorGrupo2 = '#dc3545'; // Fondo rojo 500
 
-                            $colorPredeterminado = '#efb810'; // Fondo predeterminado
+                                $colorPredeterminado = '#efb810'; // Fondo predeterminado
 
                             echo '<div style="flex-wrap: wrap; margin-bottom: 10px;">'; // Contenedor principal con flexbox
-                            foreach ($numeros_vendidos as $key => $numero) {
-                                if ($key > 0 && $key % 5 === 0) {
-                                    echo '</div><div style="flex-wrap: wrap;">'; // Nueva fila después de cada 5 elementos
-                                }
-
+                            foreach ($numeros_vendidos as $numero) {
                                 // Determinar el color de fondo basado en el número
                                 if (in_array($numero, $grupo1)) {
                                     $backgroundColor = $colorGrupo1;
+                                } elseif (in_array($numero, $grupo2)) {
+                                    $backgroundColor = $colorGrupo2;
                                 } else {
                                     $backgroundColor = $colorPredeterminado;
                                 }

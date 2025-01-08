@@ -172,12 +172,16 @@ include 'plantilla.php';
                         exit();
                     };
 
-                    if (numero == '3457' ||
-                        numero == '5729' ||
-                        numero == '4135' ||
-                        numero == '7856' ||
-                        numero == '2671' ||
-                        numero == '2025' ) {
+                    if (numero == '1234' ||
+                        numero == '1515' ||
+                        numero == '1905' ||
+                        numero == '0108' ||
+                        numero == '1122' ||
+                        numero == '9999' ||
+                        numero == '7007' ||
+                        numero == '6666' ||
+                        numero == '4268' ||
+                        numero == '8015' ) {
                         alert("❌ Acabas de ingresar un número premiado, verifica e intenta nuevamente. ❌");
                         exit();
                     }
@@ -264,10 +268,10 @@ include 'plantilla.php';
             function calcularTotalPagar(totalNumeros) {
                 let totalPagar = 0;
             
-                if (totalNumeros < 20) {
-                    totalPagar = totalNumeros * 3500; // Menos de 3 boletas a 9000
+                if (totalNumeros < 10) {
+                    totalPagar = totalNumeros * 4000; // Menos de 3 boletas a 9000
                 } else { 
-                    totalPagar = totalNumeros * 3000; // 20 o más boletas a 6000
+                    totalPagar = totalNumeros * 3500; // 20 o más boletas a 6000
                 }
                 return totalPagar;
 
