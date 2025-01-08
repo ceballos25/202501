@@ -697,7 +697,7 @@ document.addEventListener('DOMContentLoaded', () => {
         height: '14rem',
         perPage: 1,
         perMove: 1,
-        autoplay:true,
+        autoplay:false,
         breakpoints: {
             640: {
                 height: '8rem',

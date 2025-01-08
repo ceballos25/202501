@@ -56,7 +56,7 @@ $conn->close();
               <!--barra porcentaje-->
               <div class="mt-5">
                 <p class="mb-1 text-center fs-6 number-vendidos">Números vendidos:</p>
-                <div class="progress" style="height: 26px; position: relative;width:488px">
+                <div class="progress" style="height: 26px; position: relative; width:100%; max-width:488px">
                   <div id="progress-bar" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="<?php echo $porcentaje; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $porcentaje; ?>%;">
                   </div>
                   <span class="progress-bar-text texto-barra"><?php echo $porcentajeReal; ?></span>
